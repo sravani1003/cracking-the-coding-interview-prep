@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.HashSet;
 import java.util.Set;
-
+//interview question
 public class HappyNumber {
 
     public static boolean numberCheck(int n){
