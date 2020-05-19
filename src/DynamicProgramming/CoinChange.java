@@ -15,7 +15,12 @@ public class CoinChange {
 
         for(int row = 1; row < coins.length; row++){
             for(int column = 1; column < ways.length; column++){
-                ways[row][column] = ways[row - 1][column] + ways[row][column - coins[row - 1]];
+                if(column - coins[row - 1] >= 0) {
+                    ways[row][column] = ways[row - 1][column] + ways[row][column - coins[row - 1]];
+                }
+                else{
+                    ways[row][column] = ways[row - 1][column] + 0;
+                }
             }
         }
 
